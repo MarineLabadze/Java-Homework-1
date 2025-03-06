@@ -1,9 +1,6 @@
 package com.example.films.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Actors {
@@ -11,7 +8,9 @@ public class Actors {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
+    @JoinColumn(name = "first_name")
     private String firstName;
+    @JoinColumn(name = "last_name")
     private String lastName;
 
     public Actors() {}

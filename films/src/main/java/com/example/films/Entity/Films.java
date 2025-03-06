@@ -11,11 +11,22 @@ public class Films {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "title")
     private String title;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "release_year")
     private int releaseYear;
+
+    @Column(name = "language")
     private String language;
+
+    @Column(name = "rating")
     private float rating;
+
 
     public Films() {}
 
